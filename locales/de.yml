@@ -12,5 +12,47 @@ intro:
   aka: Auch bekannt als
   whats-your-name: Wie heißt du?
 not-found: Nicht gefunden
+
+index:
+  title: Bücherei Admin Übersicht
+  books:
+    title: Bücher
+    lend: Buch ausleihen
+    add: Neues Buch hinzufügen
+    copy: Buchkopie hinzufügen
+    remove: Buchkopie entfernen
+  users:
+    title: Benutzer
+    add: Benutzer hinzufügen
+    remove: Benutzer entfernen
+search:
+  placeholder: Nach Büchern suchen...
+  no-results: Keine Bücher gefunden.
+  select: Buchkopie hinzufügen
+add:
+  labels:
+    title: Titel
+    authors: Autoren
+    isbn: ISBN-13
+    publishedAt: Veröffentlicht am
+    number: Anzahl der Kopien
+    coverUrl: Buchcover URL
+    preview: Vorschau
+  buttons:
+    add: Buch hinzufügen
+    update: Bestand aktualisieren
+    cancel: Prozess Abbrechen
+    back: Zurück zur Admin Übersicht
+  errors:
+    title: Titel ist erforderlich.
+    authors: Autoren müssen mindestens 3 Zeichen lang sein.
+    isbn: ISBN muss 13 Zeichen lang sein.
+    publishedAt: Veröffentlichungsdatum ist erforderlich.
+    number: Anzahl der Kopien muss mindestens 1 sein.
+    coverUrl: Cover-URL muss eine gültige URL sein.
+  messages:
+    added: Bücher erfolgreich hinzugefügt.
+    updated: Bestand erfolgreich aktualisiert.
+    print: Drucken Sie die unten stehende Signatur aus und befestigen Sie sie an den Büchern.
 date:
   format: dd.mm.yyyy

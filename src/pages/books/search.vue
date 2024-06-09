@@ -9,6 +9,8 @@ defineOptions({
   name: 'AddBookCopyPage',
 })
 
+const { t } = useI18n()
+
 const router = useRouter()
 function goToAddBookPage(book: Book) {
   router.push(`/books/add?uuid=${book.id.uuid}`)
@@ -29,20 +31,20 @@ function updatePreview() {
     <SearchInput
       v-model="search"
       :shortcut-icon="false"
-      placeholder="Search for books..."
+      :placeholder="t('search.placeholder')"
       class="search-input-wrapper basis-[100%]"
       @update:model-value="updatePreview($event)"
     />
 
-    <div v-if="search && foundBooks.length === 0" w-full py-4>
-      No books found.
+    <div v-if="search && foundBooks.length === 0" w-full py-12 text-lg>
+      {{ t("search.no-results") }}
     </div>
     <BookElement
       v-for="book in foundBooks"
       v-else
       :key="book.id.uuid"
       :book="book"
-      select-text="Add book copy"
+      :select-text="t('search.select')"
       @select:book="goToAddBookPage"
     />
   </div>

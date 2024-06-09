@@ -1,68 +1,70 @@
 <script setup lang="ts">
 defineOptions({
-  title: "IndexPage",
-});
+  title: 'IndexPage',
+})
 
-const router = useRouter();
+const { t } = useI18n()
+
+const router = useRouter()
 function go(path: string) {
-  router.push(path);
+  router.push(path)
 }
 
 const menu = [
   {
-    title: "Books",
+    titleKey: 'index.books.title',
     items: [
       {
-        title: "Lend Book",
-        path: "/books/lend",
-        icon: "i-carbon-catalog-publish",
-        classes: "def-btn",
+        titleKey: 'index.books.lend',
+        path: '/books/lend',
+        icon: 'i-carbon-catalog-publish',
+        classes: 'def-btn',
       },
       {
-        title: "Add new Book",
-        path: "/books/add",
-        icon: "i-carbon-add-alt",
-        classes: "add-btn",
+        titleKey: 'index.books.add',
+        path: '/books/add',
+        icon: 'i-carbon-add-alt',
+        classes: 'add-btn',
       },
       {
-        title: "Add Book Copy",
-        path: "/books/search",
-        icon: "i-carbon-add-alt",
-        classes: "add-btn",
+        titleKey: 'index.books.copy',
+        path: '/books/search',
+        icon: 'i-carbon-add-alt',
+        classes: 'add-btn',
       },
       {
-        title: "Remove Book Copy",
-        path: "/books/remove",
-        icon: "i-carbon-subtract-alt",
-        classes: "remove-btn",
+        titleKey: 'index.books.remove',
+        path: '/books/remove',
+        icon: 'i-carbon-subtract-alt',
+        classes: 'remove-btn',
       },
     ],
   },
   {
-    title: "Users",
+    titleKey: 'index.users.title',
     items: [
       {
-        title: "Add User",
-        path: "/users/add",
-        icon: "i-carbon-add-alt",
-        classes: "add-btn",
+        titleKey: 'index.users.add',
+        path: '/users/add',
+        icon: 'i-carbon-add-alt',
+        classes: 'add-btn',
       },
       {
-        title: "Remove User",
-        path: "/users/remove",
-        icon: "i-carbon-subtract-alt",
-        classes: "remove-btn",
+        titleKey: 'index.users.remove',
+        path: '/users/remove',
+        icon: 'i-carbon-subtract-alt',
+        classes: 'remove-btn',
       },
     ],
   },
-];
+]
 </script>
 
 <template>
   <h1 w-full text-4xl>
     <p>
       <i i-carbon-book inline-block align-bottom />
-      &nbsp;Library Admin Panel
+      &nbsp;{{ t("index.title") }}
     </p>
   </h1>
 
@@ -71,7 +73,7 @@ const menu = [
   <div mb-5xl flex-container gap-lg>
     <template v-for="menuItem in menu" :key="menuItem.title">
       <h2 w-full text-left text-2xl>
-        {{ menuItem.title }}
+        {{ t(menuItem.titleKey) }}
       </h2>
 
       <button
@@ -91,7 +93,7 @@ const menu = [
       >
         <i :class="subItem.icon" class="basis-[10%]" />
         <p class="basis-[90%]">
-          {{ subItem.title }}
+          {{ t(subItem.titleKey) }}
         </p>
       </button>
     </template>

@@ -12,5 +12,47 @@ intro:
   aka: Also known as
   whats-your-name: What's your name?
 not-found: Not found
+
+index:
+  title: Library Admin Panel
+  books:
+    title: Books
+    lend: Lend book
+    add: Add new book
+    copy: Add book copy
+    remove: Remove book copy
+  users:
+    title: Users
+    add: Add new user
+    remove: Remove user
+search:
+  placeholder: Search for books...
+  no-results: No books found.
+  select: Add book copy
+add:
+  labels:
+    title: Title
+    authors: Authors
+    isbn: ISBN-13
+    publishedAt: Published at
+    number: Number of copies
+    coverUrl: Bookcover URL
+    preview: Preview
+  buttons:
+    add: Add book(s) to library
+    update: Update stock
+    cancel: Cancel process
+    back: Back to admin panel
+  errors:
+    title: Title is required.
+    authors: Authors must be at least 3 characters long.
+    isbn: ISBN must be 13 characters long.
+    publishedAt: Published at is required.
+    number: Number of copies must be at least 1.
+    coverUrl: Cover URL must be a valid URL.
+  messages:
+    added: Book(s) added successfully.
+    updated: Stock updated successfully.
+    print: Print the signature below and attach it to the books.
 date:
   format: mm/dd/yyyy
